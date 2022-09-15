@@ -1,6 +1,7 @@
 import User from '../model/User.js'
 class loginController {
   async login (ctx) {
+    // post请求获取数据方法
     const { body } = ctx.request
     console.log('🚀 ~ file: loginController.js ~ line 4 ~ loginController ~ login ~ body', body)
     const result = await User.findOne({

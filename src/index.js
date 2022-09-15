@@ -8,6 +8,7 @@ import compose from 'koa-compose'
 import json from 'koa-json'
 import statics from 'koa-static'
 import router from './router/index'
+import "./config/RedisConfig"
 
 const app = new Koa()
 
