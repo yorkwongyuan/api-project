@@ -8,5 +8,6 @@ const REDIS = {
 
 export default {
   DB_URL,
-  REDIS
+  REDIS,
+  JWT_SECRET: 'poweiruwqoieur13iu1231283apodsfuiiwqopeuropqwueropiu&&&&&&&&'
 }

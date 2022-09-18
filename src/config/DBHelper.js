@@ -1,5 +1,4 @@
 import config from './index'
-console.log('🚀 ~ file: DBHelper.js ~ line 2 ~ DB_URL', config)
 import mongoose from 'mongoose'
 
 mongoose.connect(config.DB_URL)
