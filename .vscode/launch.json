@@ -1,0 +1,13 @@
+{
+  "configurations": [
+  {
+    "name": "Attach",
+    "port": 4000,
+    "request": "launch",
+    "skipFiles": [
+      "<node_internals>/**"
+    ],
+    "type": "node"
+  }
+  ]
+}

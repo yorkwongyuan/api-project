@@ -4,16 +4,18 @@ import Post from '../model/Post'
 class ContentController {
   async getPostList (ctx) {
     const post = new Post({
-      title: '这是建议文章',
+      title: '首页文章, 精华',
+      catalog: 'index',
       content: '123123',
       isEnd: '0',
       isTop: '0',
       fav: 20,
       sort: '0',
       reads: '0',
-      catalog: 'advise',
       status: '0',
-      tags: []
+      tags: [{
+        name: '精华'
+      }]
     })
     // 临时保存, 测试用
     // const tmp = await post.save()
@@ -50,7 +52,6 @@ class ContentController {
       options.tags = {$elemMatch: {name: body.tag}}
     }
     const result = await Post.getList(options, sort, page, limit)
-    console.log('🚀 ~ file: ContentController.js ~ line 53 ~ ContentController ~ getPostList ~ result', result)
     ctx.body = {
       code: 200,
       data: result,

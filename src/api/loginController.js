@@ -69,7 +69,6 @@ class loginController {
   async register (ctx) {
     const { body } = ctx.request
     if (body && body.sid && body.code) {
-      console.log(body, 'body')
       const code = body.code
       const sid = body.sid
       // 是否通过校验
@@ -85,6 +84,7 @@ class loginController {
       if (isCodeOk) {
         // --> 用户名校验
         if (body.username) {
+          debugger
           const username = await User.findOne({username: body.username})
           // 用户名冲突
           if (username) {
